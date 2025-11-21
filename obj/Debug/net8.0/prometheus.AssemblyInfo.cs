@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("prometheus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+814df6b3fa2066f7cf9214204176dc2f69ed6d7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e976524601dad6eb69084b833e0b0a92cb22d83")]
 [assembly: System.Reflection.AssemblyProductAttribute("prometheus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("prometheus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
