@@ -37,6 +37,21 @@ see: https://www.alphavantage.co/documentation/
         },
     ...
 
-Commands Ran:
+Commands Ran For Setup:
 - dotnet new webapi --framework net8.0
 - dotnet add package DotNetEnv
+
+### INSIDE THE .ENV File
+I put the API key in there with "API_KEY" being the variable name. It's one thing to expose a API key to the public 🙂.
+
+# To Run the Program:
+- dotnet run 
+### It will listen on port 5000, this can be modified in the Program.cs
+
+Example Of API Calls:
+
+[localhost:5000/api/stocks/IBM](localhost:5000/api/stocks/IBM)
+
+[localhost:5000/api/stocks/AMD](localhost:5000/api/stocks/AMD)
+
+[localhost:5000/api/stocks/POS](localhost:5000/api/stocks/POS) <- Not a real stock

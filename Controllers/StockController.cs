@@ -15,16 +15,34 @@ namespace StockAPI.Controllers
 
         // GET api/stocks/{symbol}
         [HttpGet("{symbol}")]
-        public async Task<IActionResult> GetIntraday(string symbol)
+        public async Task<IActionResult> GetDailyAverages(string symbol)
         {
-            // Call AlphaClient to get intraday data
-            var data = await _alphaClient.GetIntraday(symbol);
-            
-            // If no data is returned, then send 500 error
-            if (data == null)
-                return StatusCode(500, "Error Retrieving Data from Alpha Vantage");
 
-            return Ok(data);            
+            try
+            {
+                // Call AlphaClient to get intraday data
+                var data = await _alphaClient.GetDailyAverages(symbol);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("Alpha Vantage"))
+                {
+                    // Error from Alpha Vantage API
+                    return BadRequest(new
+                    {
+                        ex.Message,
+                        symbol = symbol.ToUpper(),
+                    });
+                }
+
+                // Unknown errors get 500
+                return StatusCode(500, new
+                {
+                    error = "An unexpected error occurred.",
+                    details = ex.Message
+                });
+            }
         }
     }
 }
