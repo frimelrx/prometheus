@@ -37,16 +37,26 @@ see: https://www.alphavantage.co/documentation/
         },
     ...
 
-Commands Ran For Setup:
-- dotnet new webapi --framework net8.0
-- dotnet add package DotNetEnv
+Commands I Ran For Setup:
+- `dotnet new webapi --framework net8.0`
+- `dotnet add package DotNetEnv`
 
-### INSIDE THE .ENV File
+### INSIDE THE .env File
 I put the API key in there with "API_KEY" being the variable name. It's one thing to expose a API key to the public 🙂.
 
+#### `.env`
+```
+API_KEY = YOUR_API_KEY
+```
+
+
+
 # To Run the Program:
-- dotnet run 
-### It will listen on port 5000, this can be modified in the Program.cs
+`dotnet run` 
+
+**MAKE SURE THERE IS AN .ENV FILE WITH THE API KEY BEFORE RUNNING**
+
+It will listen on port 5000, this can be modified in the Program.cs
 
 Example Of API Calls:
 
