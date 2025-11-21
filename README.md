@@ -50,8 +50,8 @@ I put the API key in there with "API_KEY" being the variable name. It's one thin
 
 Example Of API Calls:
 
-[localhost:5000/api/stocks/IBM](localhost:5000/api/stocks/IBM)
+[localhost:5000/api/stocks/IBM](http://localhost:5000/api/stocks/IBM)
 
-[localhost:5000/api/stocks/AMD](localhost:5000/api/stocks/AMD)
+[localhost:5000/api/stocks/AMD](http://localhost:5000/api/stocks/AMD)
 
-[localhost:5000/api/stocks/POS](localhost:5000/api/stocks/POS) <- Not a real stock
+[http://localhost:5000/api/stocks/POS](http://localhost:5000/api/stocks/POS) <- Not a real stock
